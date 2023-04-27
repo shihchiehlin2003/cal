@@ -124,6 +124,13 @@ namespace cal
             operators = 3; //選擇「除」號
         }
 
+        private void btndot_Click(object sender, RoutedEventArgs e)
+        {
+            // 確認輸入文字框中完全沒有小數點
+            if (txtshow.Text.IndexOf(".") == -1)
+                txtshow.Text = txtshow.Text + ".";
+        }
+
         private void btnequal_Click(object sender, RoutedEventArgs e)
         {
             float finalResults = 0f; //宣告最後計算結果變數
