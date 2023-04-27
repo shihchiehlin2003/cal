@@ -24,5 +24,14 @@ namespace cal
         {
             InitializeComponent();
         }
+
+        private void btnone_Click(object sender, RoutedEventArgs e)
+        {
+            if(txtshow.Text=="0")
+            {
+                txtshow.Text = "";
+            }
+            txtshow.Text = txtshow.Text + "1";
+        }
     }
 }
