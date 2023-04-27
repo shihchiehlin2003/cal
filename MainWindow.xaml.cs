@@ -152,6 +152,50 @@ namespace cal
             secondNumber = 0f;
             operators = -1;
         }
+
+        private void btn8gu_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtshow.Text.Length > 0)
+            {
+                txtshow.Text = txtshow.Text.Remove(txtshow.Text.Length - 1);
+
+            }
+
+            if (txtshow.Text == "")
+                txtshow.Text = "0";
+
+        }
+
+        private void btnper_Click_1(object sender, RoutedEventArgs e)
+        {
+            float finalResults = 0f; //宣告最後計算結果變數
+            secondNumber = Convert.ToSingle(txtshow.Text); //將輸入文字框轉換成浮點數，存入第二個數字的全域變數
+
+            //依照四則運算符號的選擇，進行加減乘除
+            switch (operators)
+            {
+                case 0:
+                    finalResults = firstNumber + secondNumber;
+                    break;
+                case 1:
+                    finalResults = firstNumber - secondNumber;
+                    break;
+                case 2:
+                    finalResults = firstNumber * secondNumber;
+                    break;
+                case 3:
+                    finalResults = firstNumber / secondNumber;
+                    break;
+            }
+
+            finalResults /= 100;
+            txtshow.Text = string.Format("{0:p2}", finalResults); //在輸入文字框中，顯示最後計算結果，並且轉換成格式化的字串內容
+
+            //重置所有全域變數
+            firstNumber = 0f;
+            secondNumber = 0f;
+            operators = -1;
+        }
     }
 
         
