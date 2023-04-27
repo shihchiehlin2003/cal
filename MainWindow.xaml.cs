@@ -20,6 +20,8 @@ namespace cal
     /// </summary>
     public partial class MainWindow : Window
     {
+        float firstNumber, secondNumber; // firstNumber 儲存第一個數字，secondNumber 儲存第二個數字
+        int operators = -1; // 記錄選擇哪一種運算符號？0:加、1:減、2:乘、3:除、-1:重新設定
         public MainWindow()
         {
             InitializeComponent();
@@ -86,6 +88,34 @@ namespace cal
             if (txtshow.Text == "0")
                 txtshow.Text = "";
             txtshow.Text = txtshow.Text + "8";
+        }
+
+        private void btnadd_Click(object sender, RoutedEventArgs e)
+        {
+            firstNumber = Convert.ToSingle(txtshow.Text); //將輸入文字框轉換成浮點數，存入第一個數字的全域變數
+            txtshow.Text = "0"; //重新將輸入文字框重新設定為0
+            operators = 0; //選擇「加」號
+        }
+
+        private void btnminus_Click(object sender, RoutedEventArgs e)
+        {
+            firstNumber = Convert.ToSingle(txtshow.Text);
+            txtshow.Text = "0";
+            operators = 1; //選擇「減」號
+        }
+
+        private void btnmul_Click(object sender, RoutedEventArgs e)
+        {
+            firstNumber = Convert.ToSingle(txtshow.Text);
+            txtshow.Text = "0";
+            operators = 2; //選擇「乘」號
+        }
+
+        private void btndiv_Click(object sender, RoutedEventArgs e)
+        {
+            firstNumber = Convert.ToSingle(txtshow.Text);
+            txtshow.Text = "0";
+            operators = 3; //選擇「除」號
         }
 
         private void btnnine_Click(object sender, RoutedEventArgs e)
