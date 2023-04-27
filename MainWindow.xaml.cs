@@ -28,90 +28,70 @@ namespace cal
         private void btnone_Click(object sender, RoutedEventArgs e)
         {
             if(txtshow.Text=="0")
-            {
-                txtshow.Text = "";
-            }
+            txtshow.Text = "";
             txtshow.Text = txtshow.Text + "1";
         }
 
         private void btnzero_Click(object sender, RoutedEventArgs e)
         {
             if (txtshow.Text == "0")
-            {
-                txtshow.Text = "";
-            }
+            txtshow.Text = "";
             txtshow.Text = txtshow.Text + "0";
         }
 
         private void btntwo_Click(object sender, RoutedEventArgs e)
         {
             if (txtshow.Text == "0")
-            {
-                txtshow.Text = "";
-            }
+            txtshow.Text = "";
             txtshow.Text = txtshow.Text + "2";
         }
 
         private void btnthree_Click(object sender, RoutedEventArgs e)
         {
             if (txtshow.Text == "0")
-            {
-                txtshow.Text = "";
-            }
+            txtshow.Text = "";
             txtshow.Text = txtshow.Text + "3";
         }
 
         private void btnfour_Click(object sender, RoutedEventArgs e)
         {
             if (txtshow.Text == "0")
-            {
-                txtshow.Text = "";
-            }
+            txtshow.Text = "";
             txtshow.Text = txtshow.Text + "4";
         }
 
         private void btnfive_Click(object sender, RoutedEventArgs e)
         {
             if (txtshow.Text == "0")
-            {
-                txtshow.Text = "";
-            }
+            txtshow.Text = "";
             txtshow.Text = txtshow.Text + "5";
         }
 
         private void btnsix_Click(object sender, RoutedEventArgs e)
         {
             if (txtshow.Text == "0")
-            {
                 txtshow.Text = "";
-            }
             txtshow.Text = txtshow.Text + "6";
         }
 
         private void btnseven_Click(object sender, RoutedEventArgs e)
         {
             if (txtshow.Text == "0")
-            {
                 txtshow.Text = "";
-            }
             txtshow.Text = txtshow.Text + "7";
         }
 
         private void btneight_Click(object sender, RoutedEventArgs e)
         {
             if (txtshow.Text == "0")
-            {
                 txtshow.Text = "";
-            }
             txtshow.Text = txtshow.Text + "8";
         }
 
         private void btnnine_Click(object sender, RoutedEventArgs e)
         {
             if (txtshow.Text == "0")
-            {
                 txtshow.Text = "";
-            }
             txtshow.Text = txtshow.Text + "9";
         }
     }
