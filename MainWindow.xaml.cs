@@ -33,6 +33,12 @@ namespace cal
             txtshow.Text = txtshow.Text + _number;
         }
 
+        private void Select_Operator(int _operator)
+        {
+            firstNumber = Convert.ToSingle(txtshow.Text); //將輸入文字框轉換成浮點數，存入第一個數字的全域變數
+            txtshow.Text = "0"; //重新將輸入文字框重新設定為0
+            operators = _operator; //選擇「加」號
+        }
         private void btnone_Click(object sender, RoutedEventArgs e)
         {
             Add_Number("1"); // 只需要呼叫Add_Number函式，並且設定參數為數字1
@@ -84,30 +90,22 @@ namespace cal
 
         private void btnadd_Click(object sender, RoutedEventArgs e)
         {
-            firstNumber = Convert.ToSingle(txtshow.Text); //將輸入文字框轉換成浮點數，存入第一個數字的全域變數
-            txtshow.Text = "0"; //重新將輸入文字框重新設定為0
-            operators = 0; //選擇「加」號
+            Select_Operator(0);
         }
 
         private void btnminus_Click(object sender, RoutedEventArgs e)
         {
-            firstNumber = Convert.ToSingle(txtshow.Text);
-            txtshow.Text = "0";
-            operators = 1; //選擇「減」號
+            Select_Operator(1);
         }
 
         private void btnmul_Click(object sender, RoutedEventArgs e)
         {
-            firstNumber = Convert.ToSingle(txtshow.Text);
-            txtshow.Text = "0";
-            operators = 2; //選擇「乘」號
+            Select_Operator(2);
         }
 
         private void btndiv_Click(object sender, RoutedEventArgs e)
         {
-            firstNumber = Convert.ToSingle(txtshow.Text);
-            txtshow.Text = "0";
-            operators = 3; //選擇「除」號
+            Select_Operator(3);
         }
 
         private void btndot_Click(object sender, RoutedEventArgs e)
