@@ -89,6 +89,12 @@ namespace cal
                 txtshow.Text = "";
             txtshow.Text = txtshow.Text + "8";
         }
+        private void btnnine_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtshow.Text == "0")
+                txtshow.Text = "";
+            txtshow.Text = txtshow.Text + "9";
+        }
 
         private void btnadd_Click(object sender, RoutedEventArgs e)
         {
@@ -118,11 +124,37 @@ namespace cal
             operators = 3; //選擇「除」號
         }
 
-        private void btnnine_Click(object sender, RoutedEventArgs e)
+        private void btnequal_Click(object sender, RoutedEventArgs e)
         {
-            if (txtshow.Text == "0")
-                txtshow.Text = "";
-            txtshow.Text = txtshow.Text + "9";
+            float finalResults = 0f; //宣告最後計算結果變數
+            secondNumber = Convert.ToSingle(txtshow.Text); //將輸入文字框轉換成浮點數，存入第二個數字的全域變數
+
+            //依照四則運算符號的選擇，進行加減乘除
+            switch (operators)
+            {
+                case 0:
+                    finalResults = firstNumber + secondNumber;
+                    break;
+                case 1:
+                    finalResults = firstNumber - secondNumber;
+                    break;
+                case 2:
+                    finalResults = firstNumber * secondNumber;
+                    break;
+                case 3:
+                    finalResults = firstNumber / secondNumber;
+                    break;
+            }
+
+            txtshow.Text = string.Format("{0:0.##########}", finalResults); //在輸入文字框中，顯示最後計算結果，並且轉換成格式化的字串內容
+
+            //重置所有全域變數
+            firstNumber = 0f;
+            secondNumber = 0f;
+            operators = -1;
         }
     }
-}
+
+        
+    }
+
