@@ -131,6 +131,14 @@ namespace cal
                 txtshow.Text = txtshow.Text + ".";
         }
 
+        private void btnac_Click(object sender, RoutedEventArgs e)
+        {
+            txtshow.Text = "0";
+            firstNumber = 0f;
+            secondNumber = 0f;
+            operators = -1;
+        }
+
         private void btnequal_Click(object sender, RoutedEventArgs e)
         {
             float finalResults = 0f; //宣告最後計算結果變數
