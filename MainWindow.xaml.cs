@@ -26,74 +26,60 @@ namespace cal
         {
             InitializeComponent();
         }
+        private void Add_Number(string _number)
+        {
+            if (txtshow.Text == "0")
+                txtshow.Text = "";
+            txtshow.Text = txtshow.Text + _number;
+        }
 
         private void btnone_Click(object sender, RoutedEventArgs e)
         {
-            if(txtshow.Text=="0")
-            txtshow.Text = "";
-            txtshow.Text = txtshow.Text + "1";
+            Add_Number("1"); // 只需要呼叫Add_Number函式，並且設定參數為數字1
         }
 
         private void btnzero_Click(object sender, RoutedEventArgs e)
         {
-            if (txtshow.Text == "0")
-            txtshow.Text = "";
-            txtshow.Text = txtshow.Text + "0";
+            Add_Number("0");
         }
 
         private void btntwo_Click(object sender, RoutedEventArgs e)
         {
-            if (txtshow.Text == "0")
-            txtshow.Text = "";
-            txtshow.Text = txtshow.Text + "2";
+            Add_Number("2");
         }
 
         private void btnthree_Click(object sender, RoutedEventArgs e)
         {
-            if (txtshow.Text == "0")
-            txtshow.Text = "";
-            txtshow.Text = txtshow.Text + "3";
+            Add_Number("3");
         }
 
         private void btnfour_Click(object sender, RoutedEventArgs e)
         {
-            if (txtshow.Text == "0")
-            txtshow.Text = "";
-            txtshow.Text = txtshow.Text + "4";
+            Add_Number("4");
         }
 
         private void btnfive_Click(object sender, RoutedEventArgs e)
         {
-            if (txtshow.Text == "0")
-            txtshow.Text = "";
-            txtshow.Text = txtshow.Text + "5";
+            Add_Number("5");
         }
 
         private void btnsix_Click(object sender, RoutedEventArgs e)
         {
-            if (txtshow.Text == "0")
-                txtshow.Text = "";
-            txtshow.Text = txtshow.Text + "6";
+            Add_Number("6");
         }
 
         private void btnseven_Click(object sender, RoutedEventArgs e)
         {
-            if (txtshow.Text == "0")
-                txtshow.Text = "";
-            txtshow.Text = txtshow.Text + "7";
+            Add_Number("7");
         }
 
         private void btneight_Click(object sender, RoutedEventArgs e)
         {
-            if (txtshow.Text == "0")
-                txtshow.Text = "";
-            txtshow.Text = txtshow.Text + "8";
+            Add_Number("8");
         }
         private void btnnine_Click(object sender, RoutedEventArgs e)
         {
-            if (txtshow.Text == "0")
-                txtshow.Text = "";
-            txtshow.Text = txtshow.Text + "9";
+            Add_Number("9");
         }
 
         private void btnadd_Click(object sender, RoutedEventArgs e)
